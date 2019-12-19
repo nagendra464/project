@@ -4,7 +4,7 @@
     <groupId>com.maha</groupId>
     <artifactId>mahaLogin</artifactId>
     <packaging>war</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0SNAPSHOT</version>
     <name>Account Registration Webapp</name>
     <url>http://maven.apache.org</url>
     <properties>
