@@ -1,9 +1,16 @@
-node{
-   stage('SCM checkout'){
-     git 'https://github.com/nagendra464/project'
-    }
-   stage('compile-package'){
-     sh 'mvn package'
-    }
 
+node
+{
+    stage('clone the code'){
+        git 'https://github.com/nagendra464/project.git'
+    }
+    stage('maven roles'){
+        sh label: '', script: 'mvn install'
+    }
+    stage('the end'){
+        sh label: '', script: 'echo "the end"'
+    }
+   stage('new project'){
+       sh label: '', script: 'echo "the new file is added"'
+   } 
 }
