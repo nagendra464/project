@@ -16,4 +16,8 @@ node
     satge('new file'){
         sh label: '', script: 'echo "the new file is added"'
     }
+    satge('test'){
+        sh label: '', script: 'echo "the new file is added"'
+    }
+    
 }
