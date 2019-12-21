@@ -13,4 +13,7 @@ node
    stage('new project'){
        sh label: '', script: 'echo "the new file is added"'
    } 
+    satge('new file'){
+        sh label: '', script: 'echo "the new file is added"'
+    }
 }
