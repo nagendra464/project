@@ -3,7 +3,7 @@ node('Docker'){
 
     stage('Clone repository') {
         
-        git 'https://github.com/nagendra464/docker.git'
+        git 'https://github.com/nagendra464/project.git'
        
     }
     
