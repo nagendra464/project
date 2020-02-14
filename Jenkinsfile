@@ -48,7 +48,7 @@ node('k8s')
         sh label: '', script: 'kubectl apply -f mysvc.yml'
     }
      stage('updating the application'){
-        sh label: '', script: 'kubectl --record deployment.apps/myapp-deploy set image deployment.v1.apps/myapp-deploy myapp-container=nagendra464/naglogin:1'
+        sh label: '', script: 'kubectl --record deployment.apps/myjavaapp-deploy set image deployment.v1.apps/myjavaapp-deploy myjavaapp-container=nagendra464/naglogin:1'
     }
     
     
