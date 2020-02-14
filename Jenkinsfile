@@ -47,8 +47,8 @@ node('k8s')
      stage('create the sevice pods'){
         sh label: '', script: 'kubectl apply -f mysvc.yml'
     }
-     stage('create the sevice pods'){
-        sh label: '', script: 'kubectl --record deployment.apps/myapp-deploy set image deployment.v1.apps/myapp-deploy myapp-container=nagendra464/naglogin:2'
+     stage('updating the application'){
+        sh label: '', script: 'kubectl --record deployment.apps/myapp-deploy set image deployment.v1.apps/myapp-deploy myapp-container=nagendra464/naglogin:1'
     }
     
     
