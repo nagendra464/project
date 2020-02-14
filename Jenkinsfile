@@ -26,7 +26,7 @@ node('Docker'){
         sh label: '', script: 'docker push nagendra464/naglogin:1'
     }
     stage('Remove containers'){
-        sh label: '', script: 'docker rmi -f $(docker ps -aq)'
+        sh label: '', script: 'docker rm -f $(docker ps -aq)'
            
         
     }
