@@ -1,0 +1,8 @@
+---
+- name: Install tomcat
+  become: yes
+  hosts: ansible
+  tasks:
+  - name: update the server
+    apt:
+     update_cache: yes
