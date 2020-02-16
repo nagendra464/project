@@ -16,5 +16,5 @@
     ignore_errors: yes
     
   - name: remove docker images from ansible server
-    command: docker rmi simple-devops-image:1 nagendra464/simple-devops-image
+    command: docker rmi simple-devops-image nagendra464/simple-devops-image:1
     ignore_errors: yes
