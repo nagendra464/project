@@ -4,9 +4,6 @@
   become: sudo
 
   tasks:
-  
-  - name: docker images deleted
-    command: docker rmi  $(docker images -q) -f
     
   - name: create docker image using war file
     command: docker build -t simple-devops-image /var/lib/jenkins/workspace/sample/.
@@ -16,4 +13,8 @@
 
   - name: push image on to dockerhub
     command: docker push nagendra464/simple-devops-image:1
+    ignore_errors: yes
+    
+  - name: remove docker images from ansible server
+    command: docker rmi simple-devops-image:1 nagendra464/simple-devops-image
     ignore_errors: yes
