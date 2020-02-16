@@ -1,7 +1,7 @@
 ---
 - name: Docker images
   hosts: server
-  become: true
+  become: sudo
 
   tasks:
   - name: create docker image using war file
