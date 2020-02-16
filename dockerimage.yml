@@ -5,7 +5,7 @@
 
   tasks:
   - name: create docker image using war file
-    command: docker build -t simple-devops-image:1 .
+    command: docker build -t simple-devops-image:1 /var/lib/jenkins/workspace/sample/.
 
   - name: create tag to image
     command: docker tag simple-devops-image nagendra464/simple-devops-image:1
