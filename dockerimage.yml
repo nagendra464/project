@@ -6,7 +6,7 @@
   tasks:
   
   - name: docker images deleted
-    command: docker rmi -f $(docker images -q)
+    command: docker rmi  $(docker images -q) -f
     
   - name: create docker image using war file
     command: docker build -t simple-devops-image /var/lib/jenkins/workspace/sample/.
