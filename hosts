@@ -1,2 +1,5 @@
 [server]
 localhost
+
+[kubernates]
+172.31.33.253
