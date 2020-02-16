@@ -1,8 +1,0 @@
----
-- name: Install tomcat
-  become: yes
-  hosts: server
-  tasks:
-  - name: update the server
-    apt:
-     update_cache: yes

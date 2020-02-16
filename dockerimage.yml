@@ -1,0 +1,15 @@
+---
+- name: Docker images
+  hosts: server
+  become: true
+
+  tasks:
+  - name: create docker image using war file
+    command: docker build -t simple-devops-image:1 .
+
+  - name: create tag to image
+    command: docker tag simple-devops-image nagendra464/simple-devops-image:1
+
+  - name: push image on to dockerhub
+    command: docker push nagendra464/simple-devops-image:1
+    ignore_errors: yes
