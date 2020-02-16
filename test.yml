@@ -1,0 +1,13 @@
+---
+- hosts: kubernetes
+  become: yes
+  tasks:
+  - name: install apache2
+    apt:
+     name: apache2
+     state: present
+
+  - name: restart the apache2
+    service:
+     name: apache2
+     state: restarted  
