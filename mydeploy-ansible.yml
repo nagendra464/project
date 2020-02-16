@@ -1,7 +1,7 @@
 ---
 - name: Create pods using deployment 
   hosts: kubernetes 
-  become: yes
+  become: sudo
  
   tasks: 
   - name: create a deployment
