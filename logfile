@@ -1,4 +1,7 @@
-stage('save log build') {
+pipeline {
+  ...
+ stages {
+  stage('save log build') {
     steps {
         script {
             def logContent = Jenkins.getInstance()
@@ -10,4 +13,6 @@ stage('save log build') {
             writeFile file: "buildlog.txt", text: logContent
         }
     }
+}
+}
 }
