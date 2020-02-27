@@ -1,0 +1,36 @@
+pipeline {
+    agent any
+    environment{
+      TAG = "${BUILD_ID}"
+    }
+
+    stages{
+        stage('Clone repository'){
+            steps {
+        git 'https://github.com/nagendra464/project.git'
+ 
+            }
+    }   
+
+        stage('Maven Goals'){
+            steps {
+        sh label: '', script: 'mvn clean install package'
+  
+            }
+    } 
+        stage('Build image'){
+            steps {
+        sh label: '', script: 'docker build . -t nagendra464/deployimage:${TAG}'
+  
+            }
+    }       
+        stage('push image'){
+            steps{
+        withCredentials([string(credentialsId: 'dockerpwd', variable: 'dockerpwd')])  {
+            sh label: '', script: "docker login -u nagendra464 -p ${dockerpwd}"
+    }
+        sh label: '', script: 'docker push nagendra464/deployimage:${TAG}'
+    }
+        }
+    }
+}
