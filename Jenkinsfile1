@@ -32,6 +32,14 @@ pipeline {
         sh label: '', script: 'docker push nagendra464/deployimage:${TAG}'
     }
         }
+
+        stage('Revome images'){
+            steps {
+        sh label: '', script: 'docker rmi $(docker images -q) -f'
+  
+            }
+    }
+
     }
     
 } 
