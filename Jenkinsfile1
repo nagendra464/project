@@ -3,7 +3,7 @@ pipeline {
     environment{
       TAG = "${BUILD_ID}"
     }
-
+     node('Docker'){
     stages{
         stage('Clone repository'){
             steps {
@@ -33,4 +33,5 @@ pipeline {
     }
         }
     }
-}
+    }
+ }   
