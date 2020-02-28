@@ -37,7 +37,7 @@ pipeline {
 } 
 
 pipeline {
-agent { node { label 'k8s' } }
+    agent { node { label 'k8s' } }
     
      stages{
         stage('Clone repository'){
@@ -45,6 +45,7 @@ agent { node { label 'k8s' } }
         git 'https://github.com/nagendra464/project.git'
  
        }
-    } 
-}        
-}
+    }
+     
+    }
+}            
