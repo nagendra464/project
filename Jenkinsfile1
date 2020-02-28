@@ -47,4 +47,4 @@ agent { node { label 'k8s' } }
        }
     } 
 }        
-
+}
