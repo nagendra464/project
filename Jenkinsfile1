@@ -58,7 +58,7 @@ pipeline {
 
 node('k8s')
 {
-    stage('clone the code'){
+    stage('clone the code for kops'){
         git 'https://github.com/nagendra464/project.git'
     }
 
