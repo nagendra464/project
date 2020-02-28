@@ -1,9 +1,9 @@
 pipeline {
-    agent any
+    agent { node { label 'Docker' } } 
     environment{
       TAG = "${BUILD_ID}"
     }
-    node('Docker'){
+   
     stages{
         stage('Clone repository'){
             steps {
@@ -33,5 +33,5 @@ pipeline {
     }
         }
     }
-    }
+    
  }   
