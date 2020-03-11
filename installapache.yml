@@ -1,7 +1,7 @@
 ---
 - name: install apache on localhost
   hosts: localhost
-  become: sudo
+  become: yes
   tasks:
   - name: apache2
     apt:
