@@ -1,0 +1,16 @@
+---
+- name: install apache on localhost
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: apache2
+    apt:
+     name: apache2
+     state: present
+  - name: Restart service apache2, in all cases
+    service:
+     name: apache2
+     state: started
+   
+     
+  
