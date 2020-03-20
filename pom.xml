@@ -3,6 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.nag</groupId>
     <artifactId>naglogin</artifactId>
+	 <manifestEntries>
+                        <Specification-Title>${project.name}</Specification-Title>
+                        <Specification-Version>${project.version}</Specification-Version>
+                        <Implementation-Version>${build.number}</Implementation-Version>
+                    </manifestEntries>
     <packaging>war</packaging>
     <version>1.0</version>
     <name>Account Registration Webapp</name>
