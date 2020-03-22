@@ -4,7 +4,7 @@
     <groupId>com.nag</groupId>
     <artifactId>naglogin</artifactId>
     <packaging>war</packaging>
-    <version>SNAPSHOT-1.0.${v}</version>
+    <version>1.0</version>
     <name>Account Registration Webapp</name>
     <url>http://maven.apache.org</url>
     <properties>
